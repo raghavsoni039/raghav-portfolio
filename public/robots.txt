@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raghav-soni-portfolio.netlify.app/sitemap.xml
