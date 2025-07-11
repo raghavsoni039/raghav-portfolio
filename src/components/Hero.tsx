@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
           <div className="w-48 h-48 mx-auto mb-8 relative">
             <div className="w-full h-full rounded-full glow bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center float">
               <img
-                src="public\me.jpg"
+                src="\me.jpg"
                 alt="Raghav Soni"
                 className="w-44 h-44 rounded-full object-cover"
               />
