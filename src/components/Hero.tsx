@@ -5,7 +5,7 @@ import { ChevronDownIcon } from '@heroicons/react/24/outline';
 const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
-  const fullText = "AI Enthusiast | Full-Stack Developer | DevOps Learner";
+  const fullText = "AI Enthusiast | Tech Learner | DevOps Learner";
 
   useEffect(() => {
     let index = 0;
