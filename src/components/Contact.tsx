@@ -29,21 +29,34 @@ const Contact: React.FC = () => {
       [e.target.name]: e.target.value
     });
   };
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-    
-    // Reset success message after 3 seconds
-    setTimeout(() => setSubmitted(false), 3000);
-  };
+  try {
+    const response = await fetch("https://formsubmit.co/raghavsoni28115@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
+
+    if (response.ok) {
+      setSubmitted(true);
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setSubmitted(false), 3000);
+    } else {
+      alert("Submission failed. Please try again.");
+    }
+  } catch (error) {
+    console.error("FormSubmit error:", error);
+    alert("An error occurred. Please try again.");
+  }
+
+  setIsSubmitting(false);
+};
 
   const socialLinks = [
     {
