@@ -216,7 +216,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               </motion.div>
             )}
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form action= "https://formsubmit.co/raghavsoni28115@gmail.com" method="POST" onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Your Name
