@@ -1,7 +1,8 @@
 # Raghav Soni - Portfolio Website
 
 A modern, responsive portfolio website for Raghav Soni, showcasing his skills in AI, full-stack development, and DevOps.
-# Website link <a href="https://raghavsoni-portfolio.netlify.app" />
+
+[View Portfolio](https://raghavsoni-portfolio.netlify.app)
 
 ## 🚀 Features
 
