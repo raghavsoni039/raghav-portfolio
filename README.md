@@ -2,6 +2,8 @@
 
 A modern, responsive portfolio website for Raghav Soni, showcasing his skills in AI, full-stack development, and DevOps.
 
+[View Portfolio](https://raghavsoni-portfolio.netlify.app)
+
 ## 🚀 Features
 
 - **Modern Design**: Glassmorphism UI with smooth animations
