@@ -51,7 +51,7 @@ const Projects: React.FC = () => {
     {
       title: "Flask Web Application with CI/CD",
       description: "A Docker + Jenkins pipeline built during Linux World Internship for automated deployment and testing.",
-      techStack: ["Docker", "Jenkins", "Red Hat Linux"],
+      techStack: ["Docker", "Python","Jenkins", "Red Hat Linux"],
       icon: <CommandLineIcon className="w-8 h-8" />,
       githubLink: "https://github.com/raghavsoni039/DevOps-Project-1"
     },
