@@ -39,8 +39,9 @@ const Experience: React.FC = () => {
           />
         ))}
       </div>
-      
+
       <div className="container mx-auto px-4">
+        {/* Heading */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -48,14 +49,16 @@ const Experience: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-responsive-lg font-bold mb-4 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Experience & Education</h2>
+          <h2 className="text-responsive-lg font-bold mb-4 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+            Experience & Education
+          </h2>
           <p className="text-responsive text-gray-300 max-w-2xl mx-auto">
             My journey in technology and artificial intelligence
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Internship */}
+        {/* Internship - Independent Block */}
+        <div className="mb-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -66,7 +69,6 @@ const Experience: React.FC = () => {
               <BriefcaseIcon className="w-8 h-8 text-emerald-400" />
               <h3 className="text-xl font-semibold">Internship</h3>
             </div>
-            
             <div className="mb-4">
               <h4 className="font-semibold text-emerald-400 mb-2">Linux World Internship (Agentic AI)</h4>
               <p className="text-sm text-gray-400 mb-2">Ongoing • Started June 2025</p>
@@ -74,7 +76,6 @@ const Experience: React.FC = () => {
                 <div className="bg-emerald-400 h-2 rounded-full w-3/4 pulse"></div>
               </div>
             </div>
-            
             <div className="space-y-2 text-sm">
               <p className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
@@ -94,7 +95,10 @@ const Experience: React.FC = () => {
               </p>
             </div>
           </motion.div>
+        </div>
 
+        {/* Education and Certifications - Two Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Education */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -106,14 +110,12 @@ const Experience: React.FC = () => {
               <AcademicCapIcon className="w-8 h-8 text-teal-400" />
               <h3 className="text-xl font-semibold">Education</h3>
             </div>
-            
             <div className="space-y-4">
               <div>
                 <h4 className="font-semibold text-teal-400 mb-1">B.Tech in Artificial Intelligence</h4>
                 <p className="text-sm text-gray-300">Arya College of Engineering, Jaipur</p>
                 <p className="text-sm text-gray-400">2023 - 2027 (Expected)</p>
               </div>
-              
               <div className="border-t border-gray-600 pt-4">
                 <h4 className="font-semibold text-teal-400 mb-1">10th & 12th</h4>
                 <p className="text-sm text-gray-300">St. Edmunds School, Jaipur</p>
@@ -133,7 +135,6 @@ const Experience: React.FC = () => {
               <TrophyIcon className="w-8 h-8 text-cyan-400" />
               <h3 className="text-xl font-semibold">Certifications</h3>
             </div>
-            
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
@@ -142,7 +143,6 @@ const Experience: React.FC = () => {
                   <p className="text-sm text-gray-400">HackerRank</p>
                 </div>
               </div>
-              
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                 <div>
@@ -150,7 +150,6 @@ const Experience: React.FC = () => {
                   <p className="text-sm text-gray-400">Udemy</p>
                 </div>
               </div>
-              
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                 <div>
