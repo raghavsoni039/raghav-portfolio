@@ -11,21 +11,15 @@ import {
   faGithub,
   faJenkins,
   faRedhat,
-  faLine,
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faCode,
-  faCogs,
   faDatabase,
   faRobot,
   faChartBar,
   faFlask,
-  faServer,
-  faTerminal,
-  faLaptopCode,
   faStream,
   faChartLine,
-  faListNumeric,
   faLineChart,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
