@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
       
     },
     {
-      title: "CI/CD DevOps Project",
+      title: "Flask Web Application with CI/CD",
       description: "A Docker + Jenkins pipeline built during Linux World Internship for automated deployment and testing.",
       techStack: ["Docker", "Jenkins", "Red Hat Linux"],
       icon: <CommandLineIcon className="w-8 h-8" />,
@@ -61,6 +61,13 @@ const Projects: React.FC = () => {
       techStack: ["Python", "MySQL"],
       icon: <CpuChipIcon className="w-8 h-8" />,
       githubLink: "https://github.com/raghavsoni039/Industry-Management"
+    },
+    {
+      title: "Containerized Microservices Architecture",
+      description: " Built a Flask-based microservices project using Docker, Redis, and PostgreSQL for fast, cached data handling—deployed on RHEL 9.",
+      techStack: ["Docker"," Python" ,"Red Hat Linux","Postgres SQL" , "Redis"],
+      icon:<CommandLineIcon className='w-8 h-8' />,
+      githubLink:"https://github.com/raghavsoni039/MicroService-Architecture"
     }
   ];
 
