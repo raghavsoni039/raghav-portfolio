@@ -71,10 +71,7 @@ const Experience: React.FC = () => {
             </div>
             <div className="mb-4">
               <h4 className="font-semibold text-emerald-400 mb-2">Linux World Internship (Agentic AI)</h4>
-              <p className="text-sm text-gray-400 mb-2">Ongoing • Started June 2025</p>
-              <div className="w-full bg-gray-700 rounded-full h-2 mb-4">
-                <div className="bg-emerald-400 h-2 rounded-full w-3/4 pulse"></div>
-              </div>
+              <p className="text-sm text-gray-400 mb-2">2 Month Internship</p>
             </div>
             <div className="space-y-2 text-sm">
               <p className="flex items-center gap-2">
@@ -141,6 +138,13 @@ const Experience: React.FC = () => {
                 <div>
                   <h4 className="font-semibold text-cyan-400 mb-1">MySQL Certificate</h4>
                   <p className="text-sm text-gray-400">HackerRank</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <h4 className="font-semibold text-cyan-400 mb-1">Oracle Certified AI Foundations Associate 2025</h4>
+                  <p className="text-sm text-gray-400">Oracle Academy</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
