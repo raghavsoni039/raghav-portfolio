@@ -131,7 +131,7 @@ const Hero: React.FC = () => {
             </button>
             
             <a
-  href="public/RESUME.pdf"
+  href="https://drive.google.com/file/d/1F6XBbEU-fDRfFes9nLwcD52bvn5MwizW/view?usp=drivesdk"
   download
   className="bg-transparent border-2 border-indigo-400 text-indigo-400 px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-indigo-400 hover:text-white hover:scale-105 hover:shadow-lg focus-visible:focus min-w-[160px]"
   aria-label="Download my resume"
