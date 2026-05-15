@@ -1,155 +1,70 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { ChevronDownIcon } from '@heroicons/react/24/outline';
-
-const Hero: React.FC = () => {
-  const [displayText, setDisplayText] = useState('');
-  const [isTyping, setIsTyping] = useState(true);
-  const fullText = "AI Enthusiast | Tech Learner | DevOps Learner";
-
-  useEffect(() => {
-    let index = 0;
-    const timer = setInterval(() => {
-      if (index < fullText.length) {
-        setDisplayText(fullText.slice(0, index + 1));
-        index++;
-      } else {
-        setIsTyping(false);
-        clearInterval(timer);
-      }
-    }, 100);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
+import React from 'react';
+import { Download, ArrowRight, Code, Cpu, Database } from 'lucide-react';
+const Hero = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-[var(--primary)] via-[var(--secondary)] to-slate-800 relative overflow-hidden flex items-center justify-center">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-white rounded-full opacity-30"
-            animate={{
-              x: [0, 100, 0],
-              y: [0, -100, 0],
-              opacity: [0.3, 0.7, 0.3],
-            }}
-            transition={{
-              duration: 6 + i,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            style={{
-              left: `${20 + i * 15}%`,
-              top: `${30 + i * 10}%`,
-            }}
-          />
-        ))}
+    <section id="home" className="min-h-screen bg-[#0D0D0D] relative flex items-center justify-center overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 opacity-10">
+          <Code size={120} className="text-[#00C9A7]" />
+        </div>
+        <div className="absolute bottom-20 right-10 opacity-10">
+          <Cpu size={100} className="text-[#00C9A7]" />
+        </div>
+        <div className="absolute top-1/2 left-1/4 opacity-5">
+          <Database size={100} className="text-[#00C9A7]" />
+        </div>
       </div>
 
-      <div className="container mx-auto px-4 text-center z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mb-8"
-        >
-          {/* Profile Photo */}
-          <div className="w-48 h-48 mx-auto mb-8 relative">
-            <div className="w-full h-full rounded-full glow bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center float">
-              <img
-                src="\me.jpg"
-                alt="Raghav Soni"
-                className="w-44 h-44 rounded-full object-cover"
-              />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div className="animate-fade-in">
+          {/* Profile Image */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <div className="w-48 h-48 rounded-full bg-gradient-to-r from-[#00C9A7] to-[#00A085] p-1">
+                <div className="w-full h-full rounded-full bg-[#1A1A1A] flex items-center justify-center">
+                  <img
+                    src="/1.png"
+                    alt="Profile"
+                    className="w-44 h-44 rounded-full object-cover border-2 border-[#00C9A7]"
+                    style={{ position: 'absolute', objectPosition: 'top' }}
+                  />
+                  <Code size={48} className="text-[#00C9A7]" />
+                </div>
+              </div>
+              <div className="absolute inset-0 rounded-full shadow-lg shadow-[#00C9A7]/20"></div>
             </div>
           </div>
 
-          {/* Name and Tagline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-responsive-xl font-bold mb-4"
-          >
+          {/* Main Content */}
+          <h1 className="text-4xl md:text-6xl font-bold text-[#EAEAEA] mb-4">
             Raghav Soni
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-responsive-lg font-semibold mb-6 text-cyan-200"
-          >
-            "Crafting Innovative Solutions with Code, Curiosity, and AI"
-          </motion.p>
-
-          {/* Animated typing text */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-            className="text-responsive mb-6 h-8 flex items-center justify-center"
-          >
-            <span className="text-blue-200">
-              {displayText}
-              {isTyping && <span className="animate-pulse">|</span>}
-            </span>
-          </motion.div>
-
-          {/* Brief intro */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="text-responsive max-w-2xl mx-auto mb-8 text-gray-200"
-          >
+          </h1>
+          <p className="text-xl md:text-2xl text-[#00C9A7] mb-6">
+            AI Enthusiast | Tech Learner | DevOps Learner
+          </p>
+          <p className="text-lg text-[#B3B3B3] mb-8 max-w-2xl mx-auto">
             I'm Raghav, a B.Tech AI student passionate about building intelligent systems and scalable solutions.
-          </motion.p>
+          </p>
 
           {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-          >
-            <button
-              onClick={() => scrollToSection('projects')}
-              className="bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-indigo-700 hover:scale-105 hover:shadow-lg focus-visible:focus min-w-[160px]"
-              aria-label="View my projects"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#projects"
+              className="inline-flex items-center px-8 py-3 bg-[#00C9A7] text-[#0D0D0D] font-semibold rounded-lg hover:bg-[#00A085] transition-colors duration-300 group"
             >
               View My Work
-            </button>
-            
+              <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </a>
             <a
-  href="https://drive.google.com/file/d/1F6XBbEU-fDRfFes9nLwcD52bvn5MwizW/view?usp=drivesdk"
-  download
-  className="bg-transparent border-2 border-indigo-400 text-indigo-400 px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-indigo-400 hover:text-white hover:scale-105 hover:shadow-lg focus-visible:focus min-w-[160px]"
-  aria-label="Download my resume"
->
-  Download Resume
-</a>
-          </motion.div>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.8 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <ChevronDownIcon className="w-8 h-8 text-white bounce cursor-pointer" />
-        </motion.div>
+              href="https://drive.google.com/file/d/1F6XBbEU-fDRfFes9nLwcD52bvn5MwizW/view?usp=drivesdk"
+              className="inline-flex items-center px-8 py-3 border-2 border-[#00C9A7] text-[#00C9A7] font-semibold rounded-lg hover:bg-[#00C9A7] hover:text-[#0D0D0D] transition-colors duration-300"
+            >
+              <Download size={20} className="mr-2" />
+              Download Resume
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
