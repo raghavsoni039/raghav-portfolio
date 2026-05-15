@@ -1,4 +1,5 @@
 import React from 'react';
+import profile from '../assets/profile.png';
 import { Download, ArrowRight, Code, Cpu, Database } from 'lucide-react';
 const Hero = () => {
   return (
@@ -24,7 +25,7 @@ const Hero = () => {
               <div className="w-48 h-48 rounded-full bg-gradient-to-r from-[#00C9A7] to-[#00A085] p-1">
                 <div className="w-full h-full rounded-full bg-[#1A1A1A] flex items-center justify-center">
                   <img
-                    src="/1.png"
+                    src={profile}
                     alt="Profile"
                     className="w-44 h-44 rounded-full object-cover border-2 border-[#00C9A7]"
                     style={{ position: 'absolute', objectPosition: 'top' }}
