@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { Mail, Phone, MapPin, Send, Github, Linkedin,  Instagram } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,11 +17,35 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    await emailjs.send(
+  'service_az9srb4',
+  'template_pbc3lyh',
+  {
+    from_name: formData.name,
+    from_email: formData.email,
+    subject: formData.subject,
+    message: formData.message,
+  },
+  'FZE3tphUcZHwlonAE'
+    );
+
+    alert('Message sent successfully!');
+
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
+  } catch (error) {
+    console.error(error);
+    alert('Failed to send message.');
+  }
+};
 
   const contactInfo = [
     {
@@ -32,7 +57,8 @@ const Contact = () => {
     {
       icon: <Phone size={24} />,
       title: 'Phone',
-      value: '+91 8003389892'
+      value: '+91 8003389892',
+      link: 'tel:+918003389892'
     },
     {
       icon: <MapPin size={24} />,
@@ -51,7 +77,7 @@ const Contact = () => {
     {
       icon: <Linkedin size={24} />,
       name: 'LinkedIn',
-      url: 'www.linkedin.com/in/raghav-soni-715a8b27a'
+      url: 'https://www.linkedin.com/in/raghav-soni-715a8b27a'
     },
     {
       icon: <Instagram size={24} />,
