@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Mail, Phone, MapPin, Send, Github, Linkedin,  Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,34 +18,34 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  try {
-    await emailjs.send(
-  'service_az9srb4',
-  'template_pbc3lyh',
-  {
-    from_name: formData.name,
-    from_email: formData.email,
-    subject: formData.subject,
-    message: formData.message,
-  },
-  'FZE3tphUcZHwlonAE'
-    );
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
-    alert('Message sent successfully!');
+      alert('Message sent successfully!');
 
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
-  } catch (error) {
-    console.error(error);
-    alert('Failed to send message.');
-  }
-};
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+    } catch (error) {
+      console.error(error);
+      alert('Failed to send message.');
+    }
+  };
 
   const contactInfo = [
     {
@@ -105,7 +105,7 @@ const Contact = () => {
             <h3 className="text-2xl font-semibold text-[#EAEAEA] mb-8">
               Let's Connect
             </h3>
-            
+
             <div className="space-y-6 mb-8">
               {contactInfo.map((info, index) => (
                 <a
@@ -178,7 +178,7 @@ const Contact = () => {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="subject" className="block text-[#EAEAEA] font-medium mb-2">
                   Subject
@@ -194,7 +194,7 @@ const Contact = () => {
                   placeholder="What's this about?"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-[#EAEAEA] font-medium mb-2">
                   Message
@@ -210,7 +210,7 @@ const Contact = () => {
                   placeholder="Tell me about your project or just say hello!"
                 />
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full bg-[#00C9A7] text-[#0D0D0D] font-semibold py-3 px-6 rounded-lg hover:bg-[#00A085] transition-colors duration-300 flex items-center justify-center group"
