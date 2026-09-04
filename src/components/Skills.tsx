@@ -16,7 +16,7 @@ const Skills = () => {
     {
       title: 'Tools',
       icon: <Cpu size={24} />,
-      skills: ['Docker', 'Git', 'GitHub', 'Jenkins', 'MySQL', 'Redhat Enterprise Linux']
+      skills: ['Docker', 'Git', 'GitHub', 'Jenkins', 'MySQL','PostgreSQL','Chroma DB','Redis', 'RHEL']
     },
     {
       title: 'DevOps',
