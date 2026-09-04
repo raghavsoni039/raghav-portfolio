@@ -58,7 +58,7 @@ const Hero = () => {
               <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="https://drive.google.com/file/d/1F6XBbEU-fDRfFes9nLwcD52bvn5MwizW/view?usp=drivesdk"
+              href='https://drive.google.com/file/d/16605j5fT-Ie3tYpH9KgEgpQT97zq2d9g/view?usp=drive_link'
               className="inline-flex items-center px-8 py-3 border-2 border-[#00C9A7] text-[#00C9A7] font-semibold rounded-lg hover:bg-[#00C9A7] hover:text-[#0D0D0D] transition-colors duration-300"
             >
               <Download size={20} className="mr-2" />
