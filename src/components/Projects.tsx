@@ -4,13 +4,13 @@ import MicroserviceImg from '../assets/Microservice-Architecture.png';
 import flaskImg from '../assets/Flask-With-CICD.png';
 import MetallurgyImg from '../assets/Metallurgy.png';
 import BMSImg from '../assets/BMS.png';
-import FMS from '../assets/FMS.png';
+import ResearchMindAI from '../assets/ResearchMindAI.png';
 const Projects = () => {
   const projects = [
     {
       title: 'ResearchMindAI',
       description: 'A RAG-based Research assistant that helps users search , synthesize and get answers from Research Documents with a user-friendly interface.',
-      image: FMS,
+      image: ResearchMindAI,
       tech: ['Python' ,'Chroma DB', 'RAG','LangChain','Gemini API'],
       github: 'https://github.com/raghavsoni039/ResearchMindAI',
       icon: <Brain size={24} />
