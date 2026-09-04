@@ -1,8 +1,18 @@
-import React from 'react';
 import { Calendar, MapPin, Building } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
+    {
+      title: 'Generative AI and Cloud Computing',
+      company: 'IBM SkillsBuild Internship',
+      location: 'Jaipur,Rajasthan',
+      period: 'june-26 to july-26',
+      description: [
+        'Led a 3-member team in design developement and deployment of ResearchMindAI' ,
+        'ResearchMindAI is a RAG powered Research Assistant',
+        'Managed Deployment debugging and AWS cloud deployment','Troubleshooting runtime issues to ensure a stable , production-ready Application'
+      ]
+    },
     {
       title: 'Agentic AI Intern',
       company: 'Linux World Informatics Private Limited',
@@ -22,8 +32,8 @@ const Experience = () => {
     {
       degree: 'Bachelor of Technology in Computer Science',
       school: 'Arya College of Engineering, Jaipur',
-      period: '2023 - 2027',
-      gpa: '8.5/10.0'
+      period: '2023 - present',
+      gpa: '8.2/10.0'
     },
     {
       degree: 'Higher Secondary Education',

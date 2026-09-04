@@ -7,6 +7,14 @@ import BMSImg from '../assets/BMS.png';
 import FMS from '../assets/FMS.png';
 const Projects = () => {
   const projects = [
+    {
+      title: 'ResearchMindAI',
+      description: 'A RAG-based Research assistant that helps users search , synthesize and get answers from Research Documents with a user-friendly interface.',
+      image: FMS,
+      tech: ['Python' ,'Chroma DB', 'RAG','LangChain','Gemini API'],
+      github: 'https://github.com/raghavsoni039/ResearchMindAI',
+      icon: <Brain size={24} />
+    },
 
     {
       title: 'Flask Web Application with CI/CD',
@@ -31,14 +39,6 @@ const Projects = () => {
       tech: ['Streamlit', 'Python', 'Pandas', 'MySQL'],
       github: 'https://github.com/raghavsoni039/mysql-visualizer',
       icon: <Brain size={24} />
-    },
-    {
-      title: 'Finance Management System',
-      description: 'A console-based C++ application to manage customer loan records and EMI calculations with a user-friendly interface.',
-      image: FMS,
-      tech: ['C++'],
-      github: 'https://github.com/raghavsoni039/Finance_Management_System',
-      icon: <Code size={24} />
     },
     {
       title: 'Bank Management System',
