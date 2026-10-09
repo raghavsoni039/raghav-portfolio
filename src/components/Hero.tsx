@@ -1,5 +1,5 @@
 import React from 'react';
-import profile from '../assets/profile.png';
+import profile from '../assets/profile.jpeg';
 import { Download, ArrowRight, Code, Cpu, Database } from 'lucide-react';
 const Hero = () => {
   return (
