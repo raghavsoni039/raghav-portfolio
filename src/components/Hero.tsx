@@ -39,7 +39,7 @@ const Hero = () => {
 
           {/* Main Content */}
           <h1 className="text-4xl md:text-6xl font-bold text-[#EAEAEA] mb-4">
-            Raghav Soni
+            Raghav soni
           </h1>
           <p className="text-xl md:text-2xl text-[#00C9A7] mb-6">
             AI Enthusiast | Tech Learner | DevOps Learner
